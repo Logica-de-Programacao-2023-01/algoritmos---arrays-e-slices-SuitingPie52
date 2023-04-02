@@ -3,23 +3,22 @@ package main
 import "fmt"
 
 func main() {
-	var quantidade, y, i int
+	var quantidade, x, i int
 	conjPrimos := []int{}
-	i = 1
-	y = 1
+	x = 2
+	i = 2
 
+	fmt.Println("ALGORITMO INCOMPLETO")
 	fmt.Println("Informe uma quantidade de números primos.")
 	fmt.Scanln(&quantidade)
-	for quantidade >= i {
-		for y < quantidade {
-			if i%y != 0 {
-				if i%1 == 0 && i%i == 0 {
-					conjPrimos = append(conjPrimos, i)
-				}
+	for quantidade != len(conjPrimos) {
+		for i%x != 0 && x < i {
+			if i > 1 && i%i == 0 && i/1 == 0 {
+				conjPrimos = append(conjPrimos, i)
 			}
-			y++
+			i++
 		}
-		i++
+		x++
 	}
 	fmt.Println("Os", quantidade, "primeiros números primos são", conjPrimos)
 }
